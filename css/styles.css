@@ -204,7 +204,7 @@ a {
     font-weight: 600;
     margin: 1rem 0;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-transform: uppercase;
     text-align: center;
     white-space: nowrap;
@@ -295,6 +295,7 @@ a {
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 
 .input-group .btn {
@@ -526,29 +527,36 @@ a {
 }
 
 /* Callouts */
+.callouts {
+    background: linear-gradient(#fff 50%, #222 50%);
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
 
 .callout {
-    padding: 4rem;
-    border-radius: 5px;
+  padding: 4rem;
+  border-radius: 5px;
+  z-index: 9;
 }
 
 .callout--primary {
-    background: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
 }
 
 .callout__heading {
-    color: #fff;
-    margin-top: 0;
-    font-size: 3rem;
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
 }
 
 .callout .btn {
-    justify-self: center;
-    align-self: center;
+  justify-self: center;
+  align-self: center;
 }
 
 .callout__content {
-    text-align: center;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -563,6 +571,11 @@ a {
     .callout .btn {
         justify-self: start;
         margin: 0 2rem;
+    }
+
+    .callouts {
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 }
 
@@ -639,6 +652,7 @@ a {
     max-width: 1140px;
     margin: 0 auto;
 }
+
 
 /* Navigation Bar */
 .nav {
@@ -734,8 +748,9 @@ nav.collapsible--expanded .nav__toggler {
 }
 
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 6rem);
     font-size: 2rem;
     font-weight: 600;
